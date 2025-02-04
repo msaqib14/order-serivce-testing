@@ -12,12 +12,21 @@ public class OrderService {
 
     private OrderRepository orderRepository;
 
+
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 
+    public Order saveOrder(Order order) {
+
+       return orderRepository.save(order);
+    }
+
+
+
     public List<Order> getAllOrder(){
         List<Order> all = orderRepository.findAll();
         return all;
+
     }
 }
