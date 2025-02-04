@@ -29,4 +29,8 @@ public class OrderService {
         return all;
 
     }
+
+    public void deleteOrder(Long id) {
+        orderRepository.deleteById(id);
+    }
 }
